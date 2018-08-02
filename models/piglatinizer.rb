@@ -3,7 +3,7 @@ require 'pry'
 class PigLatinizer
 
   def piglatin(text)
-    words_array = text.split!(" ")
+    words_array = text.split(" ")
     words_array_clean = words_array.collect {|word| word.gsub(/[^a-zA-z]/, '')}
     binding.pry
     @new_text = words_array_clean.collect do |word|
