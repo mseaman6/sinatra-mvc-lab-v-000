@@ -6,6 +6,7 @@ class PigLatinizer
   def initialize(text)
     text = text.downcase
     @words = text.split(" ")
+    binding.pry
   end
 
   def pig
