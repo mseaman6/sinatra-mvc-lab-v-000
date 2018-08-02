@@ -4,8 +4,8 @@ class PigLatinizer
   attr_reader :text
 
   def initialize(text)
-    text = text.downcase
-    @words = text.split(" ")
+    words = text.downcase.split(" ")
+    words.gsub(/[^a-z]/, '')
     binding.pry
   end
 
