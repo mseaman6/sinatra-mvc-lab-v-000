@@ -9,6 +9,8 @@ class PigLatinizer
     binding.pry
   end
 
-  def pig
+  def piglatin
+    
   end
+
 end
