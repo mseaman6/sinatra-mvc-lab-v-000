@@ -6,7 +6,7 @@ class PigLatinizer
   def initialize(text)
     words = text.downcase.split(" ")
     binding.pry
-    @words_to_alter = words.collect {|word| gsub(/[^a-z]/, '')}
+    @words_to_alter = words.collect {|word| word.gsub(/[^a-z]/, '')}
   end
 
   def piglatin
