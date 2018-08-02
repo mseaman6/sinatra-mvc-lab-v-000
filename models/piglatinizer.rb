@@ -10,7 +10,7 @@ class PigLatinizer
 
   def piglatin
     @new_text = words.collect do |word|
-      if /[aeiou]/.match(word[0])
+      if /[aeiouAEIOU]/.match(word[0])
         word + "way"
       elsif /[^aeiouAEIOU]/.match(word[0]) && /[^aeiou]/.match(word[1]) && /[^aeiou]/.match(word[2])
         cut_letters = word.slice!(0,3)
