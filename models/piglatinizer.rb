@@ -21,7 +21,7 @@ class PigLatinizer
       end
     end
     binding.pry
-    @words_to_alter.join(' ')
+    @new_text.join(' ')
   end
 
 end
