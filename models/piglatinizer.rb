@@ -20,6 +20,7 @@ class PigLatinizer
         word + cut_letters + "ay"
       end
     end
+    binding.pry
     @words_to_alter.join(' ')
   end
 
