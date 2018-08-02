@@ -8,7 +8,7 @@ class PigLatinizer
     @words = split_words.collect {|word| word.gsub(/[^a-zA-z]/, '')}
   end
 
-  def piglatin
+  def piglatin(words)
     @new_text = words.collect do |word|
       if /[aeiouAEIOU]/.match(word[0])
         word + "way"
