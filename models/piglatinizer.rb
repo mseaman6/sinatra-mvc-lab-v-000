@@ -8,9 +8,9 @@ class PigLatinizer
   end
 
   def piglatin(words = @words)
-    words = text.split!(" ")
-    words_array = words.collect {|word| word.gsub(/[^a-zA-z]/, '')}
-    @new_text = words_array.collect do |word|
+    words_array = text.split!(" ")
+    words_array_clean = words_array.collect {|word| word.gsub(/[^a-zA-z]/, '')}
+    @new_text = words_array_clean.collect do |word|
       if /[aeiouAEIOU]/.match(word[0])
         word + "way"
       elsif /[^aeiouAEIOU]/.match(word[0]) && /[^aeiou]/.match(word[1]) && /[^aeiou]/.match(word[2])
