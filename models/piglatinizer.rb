@@ -9,7 +9,6 @@ class PigLatinizer
   end
 
   def piglatin
-    binding.pry
     @words_to_alter.collect do |word|
       if /[aeiou]/.match(word[0])
         word + "way"
