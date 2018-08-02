@@ -10,5 +10,5 @@ class PigLatinizer
   end
 
   def pig
-
+  end
 end
