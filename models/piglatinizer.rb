@@ -1,7 +1,7 @@
 require 'pry'
 
 class PigLatinizer
-  attr_reader :text
+  attr_reader :words
 
   def initialize(text)
     words = text.downcase.split(" ")
