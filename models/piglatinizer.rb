@@ -3,12 +3,13 @@ require 'pry'
 class PigLatinizer
   attr_reader :words
 
-  def initialize(text)
-    split_words = text.split(" ")
-    @words = split_words.collect {|word| word.gsub(/[^a-zA-z]/, '')}
+  def initialize(text)    
+    @words = text
   end
 
   def piglatin(words = @words)
+    words = text.split!(" ")
+    words = words.collect {|word| word.gsub(/[^a-zA-z]/, '')}
     @new_text = words.collect do |word|
       if /[aeiouAEIOU]/.match(word[0])
         word + "way"
