@@ -3,12 +3,8 @@ require 'pry'
 class PigLatinizer
   attr_reader :words
 
-  def initialize(text)
-    @words = text
-  end
-
-  def piglatin(words = @words)
-    words_array = words.split!(" ")
+  def piglatin(text)
+    words_array = text.split!(" ")
     words_array_clean = words_array.collect {|word| word.gsub(/[^a-zA-z]/, '')}
     binding.pry
     @new_text = words_array_clean.collect do |word|
