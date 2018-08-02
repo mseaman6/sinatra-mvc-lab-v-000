@@ -4,7 +4,7 @@ class PigLatinizer
   attr_reader :words
 
   def initialize(text)
-    split_words = text.downcase.split(" ")
+    split_words = text.split(" ")
     @words = split_words.collect {|word| word.gsub(/[^a-z]/, '')}
   end
 
