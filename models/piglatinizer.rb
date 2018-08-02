@@ -1,7 +1,6 @@
 require 'pry'
 
 class PigLatinizer
-  attr_reader :words
 
   def piglatin(text)
     words_array = text.split!(" ")
