@@ -17,9 +17,10 @@ class PigLatinizer
         word + cut_letters + "ay"
       else
         cut_letters = word.slice!(0,1)
-        word + cut_letters + "ay"    
+        word + cut_letters + "ay"
       end
     end
+    binding.pry
   end
 
 end
