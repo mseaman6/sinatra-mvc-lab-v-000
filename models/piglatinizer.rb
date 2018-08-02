@@ -9,7 +9,7 @@ class PigLatinizer
   end
 
   def piglatin
-    @words_to_alter.collect do |word|
+    @new_text = @words_to_alter.collect do |word|
       if /[aeiou]/.match(word[0])
         word + "way"
       elsif /[^aeiou]/.match(word[0]) && /[^aeiou]/.match(word[1])
